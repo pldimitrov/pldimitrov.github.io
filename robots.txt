@@ -1,4 +1,4 @@
-User-agent: *
-Disallow: 
+# www.robotstxt.org/
+# http://code.google.com/web/controlcrawlindex/
 
-Sitemap: http://plamendimitrov.net/sitemap.xml 
+User-agent: *
