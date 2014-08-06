@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blablabla | Plamen Dimitrov's homepage and blog]]></title>
+  <link href="http://plamendimitrov.net/blog/categories/blablabla/atom.xml" rel="self"/>
+  <link href="http://plamendimitrov.net/"/>
+  <updated>2014-08-06T19:09:13+02:00</updated>
+  <id>http://plamendimitrov.net/</id>
+  <author>
+    <name><![CDATA[Plamen Dimitrov]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[hello world]]></title>
+    <link href="http://plamendimitrov.net/blog/2014/01/29/hello-world/"/>
+    <updated>2014-01-29T03:10:58+01:00</updated>
+    <id>http://plamendimitrov.net/blog/2014/01/29/hello-world</id>
+    <content type="html"><![CDATA[<p>This is my first post :)</p>
+]]></content>
+  </entry>
+  
+</feed>
