@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Plamen Dimitrov's homepage and blog]]></title>
-  <link href="http://plamendimitrov.net/atom.xml" rel="self"/>
+  <title><![CDATA[Category: gsoc | Plamen Dimitrov's homepage and blog]]></title>
+  <link href="http://plamendimitrov.net/blog/categories/gsoc/atom.xml" rel="self"/>
   <link href="http://plamendimitrov.net/"/>
   <updated>2014-08-13T01:26:18+02:00</updated>
   <id>http://plamendimitrov.net/</id>
@@ -94,37 +94,7 @@ While this might be useful in certain situations, we really want to avoid this w
 
 <p>Retrieving a portion from a certain RRA in a RRD file and plotting the data.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>> rraPortion = importRRD("/tmp/bytes_in.rrd", "AVERAGE", 1401920280, 1401942000, 60)
-</span><span class='line'>
-</span><span class='line'>> head(rraPortion)
-</span><span class='line'>            timestamp      sum num
-</span><span class='line'>1401920340 1401920340  24.0400   1
-</span><span class='line'>1401920400 1401920400  24.0400   1
-</span><span class='line'>1401920460 1401920460  24.0400   1
-</span><span class='line'>1401920520 1401920520 248.5335   1
-</span><span class='line'>1401920580 1401920580 432.2100   1
-</span><span class='line'>1401920640 1401920640 432.2100   1
-</span><span class='line'>
-</span><span class='line'>> plot(rraPortion$timestamp, rraPortion$sum)</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img class="center" src="http://plamendimitrov.net/images/rplot.png" title="plotting the RRA data in R" ></p>
-
-<p>Retrieving a selection of values at specific timestamps from a certain RRA.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -137,38 +107,31 @@ While this might be useful in certain situations, we really want to avoid this w
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>> indices = c(1401941100, 1401941880, 1401939960, 1401933840, 1401931140, 1401941820, 1401922200)
-</span><span class='line'>> selection = do.call("rbind", lapply(indices, getVal, filename = "/tmp/bytes_in.rrd", cf="AVERAGE", step=60))
-</span><span class='line'>> selection
-</span><span class='line'>            timestamp       sum num
-</span><span class='line'>1401941100 1401941100  326.3180   1
-</span><span class='line'>1401941880 1401941880  710.8600   1
-</span><span class='line'>1401939960 1401939960  315.0500   1
-</span><span class='line'>1401933840 1401933840  395.6060   1
-</span><span class='line'>1401931140 1401931140  801.9072   1
-</span><span class='line'>1401941820 1401941820 2827.4305   1
-</span><span class='line'>1401922200 1401922200  822.5800   1
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
 </span><span class='line'>
-</span><span class='line'>> plot(selection$timestamp, selection$sum)</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>&lt;blockquote>&lt;p>rraPortion = importRRD(&ldquo;/tmp/bytes_in.rrd&rdquo;, &ldquo;AVERAGE&rdquo;, 1401920280, 1401942000, 60)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>head(rraPortion)
+</span><span class='line'>            timestamp      sum num
+</span><span class='line'>1401920340 1401920340  24.0400   1
+</span><span class='line'>1401920400 1401920400  24.0400   1
+</span><span class='line'>1401920460 1401920460  24.0400   1
+</span><span class='line'>1401920520 1401920520 248.5335   1
+</span><span class='line'>1401920580 1401920580 432.2100   1
+</span><span class='line'>1401920640 1401920640 432.2100   1&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>plot(rraPortion$timestamp, rraPortion$sum)&lt;/p>&lt;/blockquote>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></p>
 
+<p><img class="center" src="/images/rplot.png" title="plotting the RRA data in R" ></p>
 
-<p><img class="center" src="http://plamendimitrov.net/images/rselectionplot.png" title="plotting the RRA selection in R" ></p>
+<p>Retrieving a selection of values at specific timestamps from a certain RRA.</p>
 
-<p>The same result can be achieved with:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>> rrd = importRRD("/tmp/bytes_in.rrd")
-</span><span class='line'>> selection = rrd$AVERAGE60[as.character(indices), ]
-</span><span class='line'>> plot(selection$timestamp, selection$sum)</span></code></pre></td></tr></table></div></figure>
-
-
-<p>by importing the entire RRD file first.</p>
-
-<p>One can take advantage of the many possibilities to manipulate <em>data.frame</em> objects in R - e.g. performing various types of joins.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -178,17 +141,82 @@ While this might be useful in certain situations, we really want to avoid this w
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>> innerJoin = merge(rra1, rra2, by = "timestamp")
-</span><span class='line'>> head(innerJoin)
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
 </span><span class='line'>
-</span><span class='line'>   timestamp       sum.x num.x       sum.y     num.y
+</span><span class='line'>&lt;blockquote>&lt;p>indices = c(1401941100, 1401941880, 1401939960, 1401933840, 1401931140, 1401941820, 1401922200)
+</span><span class='line'>selection = do.call(&ldquo;rbind&rdquo;, lapply(indices, getVal, filename = &ldquo;/tmp/bytes_in.rrd&rdquo;, cf=&ldquo;AVERAGE&rdquo;, step=60))
+</span><span class='line'>selection
+</span><span class='line'>            timestamp       sum num
+</span><span class='line'>1401941100 1401941100  326.3180   1
+</span><span class='line'>1401941880 1401941880  710.8600   1
+</span><span class='line'>1401939960 1401939960  315.0500   1
+</span><span class='line'>1401933840 1401933840  395.6060   1
+</span><span class='line'>1401931140 1401931140  801.9072   1
+</span><span class='line'>1401941820 1401941820 2827.4305   1
+</span><span class='line'>1401922200 1401922200  822.5800   1&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>plot(selection$timestamp, selection$sum)&lt;/p>&lt;/blockquote>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></p>
+
+<p><img class="center" src="/images/rselectionplot.png" title="plotting the RRA selection in R" ></p>
+
+<p>The same result can be achieved with:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;p>rrd = importRRD(&ldquo;/tmp/bytes_in.rrd&rdquo;)
+</span><span class='line'>selection = rrd$AVERAGE60[as.character(indices), ]
+</span><span class='line'>plot(selection$timestamp, selection$sum)&lt;/p>&lt;/blockquote>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></p>
+
+<p>by importing the entire RRD file first.</p>
+
+<p>One can take advantage of the many possibilities to manipulate <em>data.frame</em> objects in R - e.g. performing various types of joins.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;p>innerJoin = merge(rra1, rra2, by = &ldquo;timestamp&rdquo;)
+</span><span class='line'>head(innerJoin)&lt;/p>&lt;/blockquote>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   timestamp       sum.x num.x       sum.y     num.y
 </span><span class='line'>1 1401921000    675.5600     1    458.6034 1.0000000
 </span><span class='line'>2 1401921600   6811.4233     1   1438.8657 1.0000000
 </span><span class='line'>3 1401922200    822.5800     1  30883.0741 1.0000000
 </span><span class='line'>4 1401922800   1677.4500     1   1462.9487 1.0000000
 </span><span class='line'>5 1401923400    433.0000     1   3849.4176 1.0000000
-</span><span class='line'>6 1401924000  24278.2883     1   3425.4432 1.0000000</span></code></pre></td></tr></table></div></figure>
-
+</span><span class='line'>6 1401924000  24278.2883     1   3425.4432 1.0000000&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></p>
 
 <p>This makes it possible to easily prepare metrics data from multiple data sources and RRD files to be used for statistical analysis or fed to a neural network.</p>
 

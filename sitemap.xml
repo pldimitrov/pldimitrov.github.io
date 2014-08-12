@@ -3,29 +3,29 @@
   
   
   <url>
-    <loc>http://plamendimitrov.net/blog/2014/01/29/hello-world/</loc>
-    <lastmod>2014-01-29T03:10:58+01:00</lastmod>
+    <loc>http://plamendimitrov.net/blog/2014/08/09/r-package-for-working-with-rrd-files/</loc>
+    <lastmod>2014-08-09T17:50:28+02:00</lastmod>
     <priority>0.8</priority>
   </url>
   
   
   <url>
     <loc>http://plamendimitrov.net/blog/archives/</loc>
-    <lastmod>2014-08-06T19:43:37+02:00</lastmod>
+    <lastmod>2014-08-13T01:26:18+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://plamendimitrov.net/</loc>
-    <lastmod>2014-08-06T19:43:37+02:00</lastmod>
+    <lastmod>2014-08-13T01:26:18+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://plamendimitrov.net/about/</loc>
-    <lastmod>2014-08-06T19:43:37+02:00</lastmod>
+    <lastmod>2014-08-13T01:26:18+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
