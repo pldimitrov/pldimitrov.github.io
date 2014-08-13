@@ -166,7 +166,7 @@ The read-ahead size and the total size of the cache (per RRA) can be adjusted vi
 
 <p>Since looking up rows by row names (if we are to use <em>dataFrame[&ldquo;timestamp&rdquo;, ]</em>) is not done in constant time in R, the row index is calculated from the boundary timestamp values in the current cache and the <em>timestamp</em> and <em>step</em> parameters to allow for immediate indexing, instead.
 In order for this to work we have to make sure the cache contains no gaps - i.e. the time distance between any two adjacent values in the cache is <em>step</em>.
-<em>getVal</em> also checks if the <em>timestamp</em> is valid by looking at the boundaries of the cache and <em>step</em>. It will not cause an unnecessary call to rrd_fetch_r if it isn&rsquo;t.</p>
+<em>getVal</em> also checks if the <em>timestamp</em> is valid by looking at the boundaries of the cache and <em>step</em>. It will not cause an unnecessary call to <em>rrd_fetch_r</em> if it isn&rsquo;t.</p>
 
 <p>The cache is updated as the following:</p>
 
@@ -182,7 +182,7 @@ In order for this to work we have to make sure the cache contains no gaps - i.e.
 In case a value with a <em>timestamp</em> smaller than the earliest available for the RRA of interest is requested, <em>rra_fetch_r</em> will sometimes try to deliver a portion from another RRA in this RRD that contains a value with the specified <em>timestamp</em>.
 While this might be useful in certain situations, we really want to avoid this when working with the cache as each RRA we are getting values from is associated with a specific <em>data.frame</em> in the cache and we want all values to be <em>step</em> apart (the RRA that contains the <em>timestamp</em> could have a different <em>step</em>).</p>
 
-<p>In order to solve this problem, <em>getVal</em> would obtain the earliest timestamp on the first cache-miss for a given RRA (and store it in a <em>rrd.first</em> environment object). It will then not allow <em>rrd_fetch_r</em> to be called with a <em>timestamp</em> smaller then the first one for a given RRA.</p>
+<p>In order to solve this problem, <em>getVal</em> would obtain the earliest timestamp on the first cache-miss for a given RRA (and store it in a <em>rrd.first</em> environment object). It will then not allow <em>rrd_fetch_r</em> to be called with a <em>timestamp</em> smaller than the first one for a given RRA.</p>
 
 <h2>Example use</h2>
 
