@@ -71,7 +71,7 @@ The cache is updated as the following:
 
 -- similarly, extend the cache to include all values starting _rrd.cacheBlock_ ones before the requested _timestamp_ if it is smaller than the earliest currently stored
 
--- if the newly obtained cache entry for a given RRA is to exceed _rra.cacheSize_ in size, that entry is replaced with the  _rrd_cacheBlock_ next and previous values around the requested _timestamp_ as in the beginning
+-- if the newly obtained cache entry for a given RRA is to exceed _rra.cacheSize_ in size, that entry is replaced with the  _rrd.cacheBlock_ next and previous values around the requested _timestamp_ as in the beginning
 
 Another complication is due to the fact that, as mentioned above, _rrd_fetch_r_ will try to always find the RRA that matches the parameters best.
 In case a value with a _timestamp_ smaller than the earliest available for the RRA of interest is requested, _rra_fetch_r_ will sometimes try to deliver a portion from another RRA in this RRD that contains a value with the specified _timestamp_. 
