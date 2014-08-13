@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gsoc | Plamen Dimitrov's homepage and blog]]></title>
   <link href="http://plamendimitrov.net/blog/categories/gsoc/atom.xml" rel="self"/>
   <link href="http://plamendimitrov.net/"/>
-  <updated>2014-08-13T01:26:18+02:00</updated>
+  <updated>2014-08-13T14:03:57+02:00</updated>
   <id>http://plamendimitrov.net/</id>
   <author>
     <name><![CDATA[Plamen Dimitrov]]></name>
@@ -82,7 +82,7 @@ In order for this to work we have to make sure the cache contains no gaps - i.e.
 
 <p>&ndash; similarly, extend the cache to include all values starting <em>rrd.cacheBlock</em> ones before the requested <em>timestamp</em> if it is smaller than the earliest currently stored</p>
 
-<p>&ndash; if the newly obtained cache entry for a given RRA is to exceed <em>rra.cacheSize</em> in size, that entry is replaced with the  <em>rrd_cacheBlock</em> next and previous values around the requested <em>timestamp</em> as in the beginning</p>
+<p>&ndash; if the newly obtained cache entry for a given RRA is to exceed <em>rra.cacheSize</em> in size, that entry is replaced with the  <em>rrd.cacheBlock</em> next and previous values around the requested <em>timestamp</em> as in the beginning</p>
 
 <p>Another complication is due to the fact that, as mentioned above, <em>rrd_fetch_r</em> will try to always find the RRA that matches the parameters best.
 In case a value with a <em>timestamp</em> smaller than the earliest available for the RRA of interest is requested, <em>rra_fetch_r</em> will sometimes try to deliver a portion from another RRA in this RRD that contains a value with the specified <em>timestamp</em>.
