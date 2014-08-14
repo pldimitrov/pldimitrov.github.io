@@ -4,7 +4,7 @@
   <title><![CDATA[Plamen Dimitrov's homepage and blog]]></title>
   <link href="http://plamendimitrov.net/atom.xml" rel="self"/>
   <link href="http://plamendimitrov.net/"/>
-  <updated>2014-08-14T22:32:13+02:00</updated>
+  <updated>2014-08-14T22:37:28+02:00</updated>
   <id>http://plamendimitrov.net/</id>
   <author>
     <name><![CDATA[Plamen Dimitrov]]></name>
@@ -78,13 +78,13 @@ In order for this to work we have to make sure the cache contains no gaps - i.e.
 
 <p>The cache is updated as the following:</p>
 
-<p>&ndash; if <em>rrd.cache[[key]]</em> is NULL (i.e. there are no entires in the cache for that RRA) - retrieve a timestamp range that includes the <em>rrd.cacheBlock</em> next and previous values and store that in the cache</p>
+<p>&ndash; if <em>rrd.cache[[key]]</em> is NULL (i.e. there are no entires in the cache for that RRA) - retrieve a timestamp range that includes the <em>rrd.cacheBlock</em> next and previous values and store that in the cache.</p>
 
-<p>&ndash; if the requested <em>timestamp</em> is larger than the latest currently stored timestamp in the cache, extend the cache to also include the values up until <em>rrd.cacheBlock</em> values after the requested one</p>
+<p>&ndash; if the requested <em>timestamp</em> is larger than the latest currently stored timestamp in the cache, extend the cache to also include the values up until <em>rrd.cacheBlock</em> values after the requested one.</p>
 
-<p>&ndash; similarly, extend the cache to include all values starting <em>rrd.cacheBlock</em> ones before the requested <em>timestamp</em> if it is smaller than the earliest currently stored</p>
+<p>&ndash; similarly, extend the cache to include all values starting <em>rrd.cacheBlock</em> ones before the requested <em>timestamp</em> if it is smaller than the earliest currently stored.</p>
 
-<p>&ndash; if the newly obtained cache entry for a given RRA is to exceed <em>rra.cacheSize</em> in size, that entry is replaced with the  <em>rrd.cacheBlock</em> next and previous values around the requested <em>timestamp</em> as in the beginning</p>
+<p>&ndash; if the newly obtained cache entry for a given RRA is to exceed <em>rra.cacheSize</em> in size, that entry is replaced with the  <em>rrd.cacheBlock</em> next and previous values around the requested <em>timestamp</em> as in the first case.</p>
 
 <p>Another complication is due to the fact that, as mentioned above, <em>rrd_fetch_r</em> will try to always find the RRA that matches the parameters best.
 In case a value with a <em>timestamp</em> smaller than the earliest available for the RRA of interest is requested, <em>rra_fetch_r</em> will sometimes try to deliver a portion from another RRA in this RRD that contains a value with the specified <em>timestamp</em>.
