@@ -4,7 +4,7 @@
   <title><![CDATA[Plamen Dimitrov's homepage and blog]]></title>
   <link href="http://plamendimitrov.net/atom.xml" rel="self"/>
   <link href="http://plamendimitrov.net/"/>
-  <updated>2014-08-13T15:38:27+02:00</updated>
+  <updated>2014-08-14T22:32:13+02:00</updated>
   <id>http://plamendimitrov.net/</id>
   <author>
     <name><![CDATA[Plamen Dimitrov]]></name>
@@ -30,6 +30,8 @@ Using .Call and the R headers for C makes it possible to pass R (<em>SEXP</em>) 
 A <em>SEXP</em> object can be of any data type used in R - e.g. vector, <em>data.frame</em>, integer, etc.
 This lets us implement C functions that take <em>SEXP</em> objects as arguments, use core librrd functions (<em>rrd_fetch_r</em>, <em>rrd_info</em>, <em>rrd_first</em>, <em>rrd_last</em>, etc.) to retrieve data from RRD files, generate  <em>SEXP</em> objects (such as <em>data.frame</em>-s), populate them with the retrieved data and return them to the caller function in R.</p>
 
+<p><a href="http://mazamascience.com/WorkingWithData/?p=1099">Here</a> is a great introduction to .Call written by Jonathan Callahan.</p>
+
 <h2>The package provides the following functions:</h2>
 
 <ul>
@@ -43,7 +45,7 @@ Returns a <em>data.frame</em> object containing the desired portion of the RRA t
 The data source names are retrieved and the columns of the <em>data.frame</em> are named accordingly.
 Due to the implementation specifics of <em>rrd_fetch_r</em> the result does not include the row with timestamp <em>start</em>.</p>
 
-<p>For more information on <em>rrd_fetch_r</em>, please consult the <a href="http://oss.oetiker.ch/rrdtool/doc/rrdfetch.en.html">official documentation</a></p>
+<p>For more information on <em>rrd_fetch_r</em>, please consult the <a href="http://oss.oetiker.ch/rrdtool/doc/rrdfetch.en.html">official RRDtool documentation</a></p>
 
 <ul>
 <li><strong><em>importRRD(filename)</em></strong></li>
