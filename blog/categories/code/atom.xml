@@ -4,7 +4,7 @@
   <title><![CDATA[Category: code | Plamen Dimitrov's homepage and blog]]></title>
   <link href="http://plamendimitrov.net/blog/categories/code/atom.xml" rel="self"/>
   <link href="http://plamendimitrov.net/"/>
-  <updated>2014-08-15T02:40:10+02:00</updated>
+  <updated>2014-08-15T02:41:23+02:00</updated>
   <id>http://plamendimitrov.net/</id>
   <author>
     <name><![CDATA[Plamen Dimitrov]]></name>
@@ -94,7 +94,10 @@ While this might be useful in certain situations, we really want to avoid this w
 
 <h2>Example use</h2>
 
-<p> Retrieving a portion from a certain RRA in a RRD file and plotting the data.</p>
+<ul>
+<li>Retrieving a portion from a certain RRA in a RRD file and plotting the data.</li>
+</ul>
+
 
 <p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
