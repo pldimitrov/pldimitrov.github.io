@@ -19,8 +19,7 @@ Unfortunately, the name given to me by my parents, albeit (probably) sounding st
  For those still reading... this page is about Plamen *Sashev* Dimitrov - the __geek__, the __musician__ (not the accordion guy, though - I can't stress this enough).
 
 #What do I do?
-
-- I'm a MSc student in computer science at [VU University][vu] Amsterdam, currently working on my [thesis](http://wiki.cs.vu.nl/mp/index.php/Malleable_MPI_using_Virtual_Machines). I hack [OpenNebula](http://opennebula.org/) to make it possible for parallel [MPI](http://en.wikipedia.org/wiki/Message_Passing_Interface) programs to dynamically adjust the number of physical machines participating in the computation at runtime.
+<!--more about myself - msc graduate, enthusiastic about *-->
 - My interests span multiple areas of computer science - distributed systems, AI, machine learning, evolutionary computing and others.
 - My [Erdős number](http://en.wikipedia.org/wiki/Erdős_number) is currently __4__. So must be Erdős' Dimitrov number ;)
 - I have work experience both in the IT and research industries.
@@ -32,11 +31,22 @@ Unfortunately, the name given to me by my parents, albeit (probably) sounding st
 
 
 #Currently I'm...
-- studying computer science (MSc) at [VU University][vu].
-- automating things with [Ansible](http://www.ansible.com/home) and being an Android neophyte at [shuffler.fm](http://shuffler.fm/).
-- participating in [Google Summer of Code 2014](https://www.google-melange.com/gsoc/homepage/google/gsoc2014) doing work for [Ganglia](http://ganglia.sourceforge.net/).
+- working full-time as a DevOps Engineer at [StyleShoots](http://styleshoots.com) 
 
 #I used to...
+<!--- I'm a MSc student in computer science at [VU University][vu] Amsterdam, currently working on my [thesis](http://wiki.cs.vu.nl/mp/index.php/Malleable_MPI_using_Virtual_Machines). I hack [OpenNebula](http://opennebula.org/) to make it possible for parallel [MPI](http://en.wikipedia.org/wiki/Message_Passing_Interface) programs to dynamically adjust the number of physical machines participating in the computation at runtime.-->
+<!--link to thesis-->
+- study computer science (MSc) at [VU University][vu]. My [thesis](http://wiki.cs.vu.nl/mp/index.php/Malleable_MPI_using_Virtual_Machines) had to do with hacking [OpenNebula](http://opennebula.org/) to make it possible for parallel [MPI](http://en.wikipedia.org/wiki/Message_Passing_Interface) programs to dynamically adjust the number of physical machines participating in the computation at runtime.
+- study computer science (MSc) at [VU University][vu]. My [thesis](http://wiki.cs.vu.nl/mp/index.php/Malleable_MPI_using_Virtual_Machines) had to do with hacking 
+- automate things with [Ansible](http://www.ansible.com/home) and be an Android neophyte at [shuffler.fm](http://shuffler.fm/) and [pause.fm](http://pause.fm).
+- participate in [Google Summer of Code 2014](https://www.google-melange.com/gsoc/homepage/google/gsoc2014) doing work for [Ganglia](http://ganglia.sourceforge.net/).
+- intern at [TNO](https://www.tno.nl/index.cfm?Taal=2), where I learned about software defined networking and internet factories.
+- work as a research assistant at [VU University][vu], where I used sentiment analysis techniques to find out what makes people depressed.
+- work as a sysadmin at [SDL Fredhopper](http://www.sdl.com/products/fredhopper/).
+- intern and later work as a research assistant at [Fraunhofer MeVis](http://www.mevis.fraunhofer.de/en.html) - institute for medical image computing.
+- study computer science (BSc) at [Jacobs University Bremen][jub]. My [BSc thesis](http://cnds.eecs.jacobs-university.de/archive/bsc-2011-pdimitrov.pdf) aimed to identify the [congestion control algorithms](http://en.wikipedia.org/wiki/Taxonomy_of_congestion_control) most widely used on the Internet with active probing.
+- automate things with [Ansible](http://www.ansible.com/home) and be an Android neophyte at [shuffler.fm](http://shuffler.fm/) and [pause.fm](http://pause.fm).
+- participate in [Google Summer of Code 2014](https://www.google-melange.com/gsoc/homepage/google/gsoc2014) doing work for [Ganglia](http://ganglia.sourceforge.net/).
 - intern at [TNO](https://www.tno.nl/index.cfm?Taal=2), where I learned about software defined networking and internet factories.
 - work as a research assistant at [VU University][vu], where I used sentiment analysis techniques to find out what makes people depressed.
 - work as a sysadmin at [SDL Fredhopper](http://www.sdl.com/products/fredhopper/).
