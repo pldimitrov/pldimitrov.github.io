@@ -2,11 +2,11 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
-simple_search: https://www.google.com/search
+url: http://plamendimitrov.net
+title: Plamen Dimitrov's homepage and blog
+#subtitle: A blogging framework for hackers.
+author: Plamen Dimitrov
+simple_search: http://google.com/search
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -20,6 +20,7 @@ subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
+logo: mewithkbd.jpg
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -39,19 +40,24 @@ rdiscount:
     - autolink
     - footnotes
     - smart
-highlighter: pygments # default python pygments have been replaced by pygments.rb
+#pygments: false # default python pygments have been replaced by pygments.rb
+highlighter: nil
 
 paginate: 10          # Posts per page on the blog index
-paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
+pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
-excerpt_separator: "<!--more-->"
 
 titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+#default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html, asides/twitter.html]
+default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.html]
+#default_asides: [custom/asides/found_on.html, asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html,custom/asides/instagram.html, asides/twitter.html]
+#blog_index_asides: [custom/asides/about.html, asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+#post_asides: [custom/asides/about.html, asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+#page_asides: [custom/asides/about.html, asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -64,13 +70,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: pldimitrov
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: pldimitrov
 twitter_tweet_button: true
 
 # Google +1
@@ -91,11 +97,18 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: plamendimitrov
+disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-48126796-1
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
+
+quora_user: Plamen-Dimitrov-1
+stackoverflow_user: 649805
+linkedin_user: pldimitrov
+instagram_user: pldimitrov
+instagram_client: 6657654cf6934cee9c46b091f545e3a1
+instagram_acces_token: 810c35562e8d494586a1212c3c770b12
